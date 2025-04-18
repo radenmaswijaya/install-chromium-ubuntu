@@ -13,20 +13,18 @@ echo "============================================"
 apt update -y
 
 # Install dependencies
-apt install -y software-properties-common apt-transport-https wget gnupg lsb-release
+apt install -y curl wget gnupg lsb-release software-properties-common apt-transport-https snapd
 
-# Install Chromium
-apt install -y chromium-browser
+# Install Chromium via snap
+echo "Installing Chromium via snap..."
+snap install chromium
 
 # Cek versi Chromium
 echo "============================================"
 echo " Chromium Version:"
-chromium-browser --version
+chromium --version
 echo "============================================"
 
-# (Opsional) Jalankan Chromium headless
-# chromium-browser --headless --disable-gpu --screenshot https://example.com
-
 echo "============================================"
-echo "  DONE! SEMUA BERKAT BARON YANG GANTENG BGT!"
+echo "  DONE! SEMUA BERKAT BARON YANG GANTENG INI!"
 echo "============================================"
